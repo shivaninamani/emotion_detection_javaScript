@@ -27,46 +27,4 @@
   <video id="video" width="720" height="560" autoplay muted></video>
 </body>
 
-
-<!--<script>
-  let videoElement = document.querySelector("#videoElement");
-let mediaStream;
- var faceapi="D:/sfolder/sprograms/python/projects/emo/face-api.min.js"
-
-Promise.all([
-    faceapi.nets.tinyFaceDetector.loadFromUri('D:/sfolder/sprograms/python/projects/emo//models'),
-    faceapi.nets.faceLandmark68Net.loadFromUri('D:/sfolder/sprograms/python/projects/emo//models'),
-    faceapi.nets.faceRecognitionNet.loadFromUri('D:/sfolder/sprograms/python/projects/emo//models'),
-    faceapi.nets.faceExpressionNet.loadFromUri('D:/sfolder/sprograms/python/projects/emo//models')
-]).then(startStreams)
-
-function startStreams() {
-    if (navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ video: true, audio: true })
-            .then(function(stream) {
-                mediaStream = stream;
-                videoElement.srcObject = stream;
-            })
-            .catch(function(error) {
-                console.error('Error accessing camera or microphone:', error);
-            });
-    } else {
-        console.error('getUserMedia not supported');
-    }
-}
-
-videoElement.addEventListener('play',()=>{
-    console.log("hsjd");
-})
-function stopStreams() {
-    if (mediaStream) {
-        let tracks = mediaStream.getTracks();
-        tracks.forEach(function(track) {
-            track.stop();
-        });
-        videoElement.srcObject = null;
-    }
-}
-
-</script>-->
 </html>
