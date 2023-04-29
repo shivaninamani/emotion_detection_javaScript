@@ -1,4 +1,3 @@
-// Access video element
 const video = document.getElementById('video');
 
 // Load models
@@ -9,7 +8,7 @@ Promise.all([
   faceapi.nets.faceExpressionNet.loadFromUri('/models')
 ]).then(startVideo);
 
-// Start video
+
 function startVideo() {
     console.log('starttt v')
       navigator.getUserMedia(
@@ -20,9 +19,6 @@ function startVideo() {
     }
 
 
-
-
-// Detect emotions on video frames
 video.addEventListener('play', () => {
   const canvas = faceapi.createCanvasFromMedia(video);
   document.body.append(canvas);
